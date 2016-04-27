@@ -1,0 +1,31 @@
+mysql> ALTER TABLE ElectronicMail MODIFY COLUMN type ENUM("home", "work", "other", "temp");
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe ElectronicMail;
++---------+------------------------------------+------+-----+---------+----------------+
+| Field   | Type                               | Null | Key | Default | Extra          |
++---------+------------------------------------+------+-----+---------+----------------+
+| id      | int(11)                            | NO   | PRI | NULL    | auto_increment |
+| entryId | int(11)                            | YES  | MUL | NULL    |                |
+| type    | enum('home','work','other','temp') | YES  |     | NULL    |                |
+| content | varchar(255)                       | YES  |     | NULL    |                |
++---------+------------------------------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
+
+mysql> UPDATE ElectronicMail SET type = "temp" WHERE type = "home";
+Query OK, 920 rows affected (0.01 sec)
+Rows matched: 920  Changed: 920  Warnings: 0
+
+mysql> UPDATE ElectronicMail SET type = "home" WHERE type = "work";
+Query OK, 690 rows affected (0.01 sec)
+Rows matched: 690  Changed: 690  Warnings: 0
+
+mysql> UPDATE ElectronicMail SET type = "work" WHERE type = "temp";
+Query OK, 920 rows affected (0.01 sec)
+Rows matched: 920  Changed: 920  Warnings: 0
+
+mysql> ALTER TABLE ElectronicMail MODIFY COLUMN type ENUM("home", "work", "other");
+Query OK, 2300 rows affected (0.07 sec)
+Records: 2300  Duplicates: 0  Warnings: 0
+

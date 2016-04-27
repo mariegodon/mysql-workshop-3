@@ -1,0 +1,44 @@
+SELECT CASE LENGTH(rev)
+    WHEN 10 THEN CONCAT("(", LEFT(rev,3), ") ", SUBSTRING(rev, 5, 3), "-", RIGHT(rev, 4))
+    WHEN 11 THEN CONCAT(LEFT(rev, 1), "-", SUBSTRING(rev, 2, 3), "-", SUBSTRING(rev, 5, 3), "-", RIGHT(rev, 4))
+    END
+    AS reversedFaxNumber,
+    content AS originalFaxNumber
+    FROM
+    (SELECT 
+        CASE SUBSTRING(content, 1, 1) 
+            WHEN "(" THEN REVERSE(CONCAT(SUBSTRING(content, 2, 3), SUBSTRING(content, 7, 3), SUBSTRING(content,11,4)))
+            WHEN "1" THEN REVERSE(CONCAT(LEFT(content, 1), SUBSTRING(content,3,3), SUBSTRING(content, 7,3), SUBSTRING(content, 11,4)))
+        END 
+        AS rev,
+        subtype,
+        content
+        FROM Phone) AS r
+    WHERE subtype = "fax";
+    
++-------------------+-------------------+
+| reversedFaxNumber | originalFaxNumber |
++-------------------+-------------------+
+| (622) 677-7071    | (170) 776-2226    |
+| (357) 356-6885    | (588) 653-2753    |
+| (208) 129-9104    | (401) 921-5802    |
+| (200) 572-2934    | (439) 275-5002    |
+| (625) 167-7355    | (553) 761-8526    |
+| (062) 713-3033    | (330) 317-3260    |
+| (722) 735-5397    | (793) 537-0227    |
+| (744) 607-7763    | (367) 706-0447    |
+    
+...
+
+| 0-221-879-4081    | 1-804-978-1220    |
+| 6-234-876-7331    | 1-337-678-4326    |
+| 9-085-519-0021    | 1-200-915-5809    |
+| 7-415-631-0991    | 1-990-136-5147    |
+| 3-976-639-5851    | 1-585-936-6793    |
+| 7-841-707-4291    | 1-924-707-1487    |
+| 8-067-623-1841    | 1-481-326-7608    |
+| 1-050-422-8531    | 1-358-224-0501    |
+| 2-394-865-3961    | 1-693-568-4932    |
+| 4-329-408-4941    | 1-494-804-9234    |
++-------------------+-------------------+
+660 rows in set (0.00 sec)

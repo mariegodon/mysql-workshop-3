@@ -1,0 +1,16 @@
+mysql> SELECT CONCAT(ROUND(RAND()*100), " ", SUBSTRING_INDEX(addressLine1, " ", -2)) AS randomStreetNumbers, id, type FROM Address WHERE type = "other" AND id BETWEEN 715 AND 800 ORDER BY addressLine1 ASC LIMIT 10; 
++---------------------+-----+-------+
+| randomStreetNumbers | id  | type  |
++---------------------+-----+-------+
+| 48 Interdum. St.    | 756 | other |
+| 18 Est. Road        | 782 | other |
+| 48 Dignissim St.    | 753 | other |
+| 86 Vehicula St.     | 784 | other |
+| 86 Eu, Ave          | 755 | other |
+| 73 Risus Ave        | 727 | other |
+| 5 Eu Av.            | 790 | other |
+| 6 Dignissim Avenue  | 787 | other |
+| 17 Elit St.         | 724 | other |
+| 67 Auctor Road      | 758 | other |
++---------------------+-----+-------+
+10 rows in set (0.00 sec)

@@ -1,0 +1,56 @@
+mysql> SELECT city, country FROM Address WHERE country IN ("Canada", "Austria", "Isle Of Man", "Ireland", "Japan") ORDER BY country;
+
++----------------+-------------+
+| city           | country     |
++----------------+-------------+
+| Dubbo          | Austria     |
+| Bodmin         | Austria     |
+| Alness         | Austria     |
+| Zwickau        | Austria     |
+| Siedlce        | Austria     |
+| Edmundston     | Austria     |
+| Shimla         | Austria     |
+| Ceyhan         | Austria     |
+| Hamburg        | Austria     |
+| Tauranga       | Austria     |
+| Vienna         | Austria     |
+| Calmar         | Canada      |
+| San Francisco  | Canada      |
+| Tirrases       | Canada      |
+| Quesada        | Canada      |
+| Springfield    | Canada      |
+| Baulers        | Canada      |
+| Rollegem       | Canada      |
+| Hillsboro      | Canada      |
+| Angers         | Canada      |
+| Satara         | Canada      |
+| Mabompr?       | Canada      |
+| Pietraroja     | Canada      |
+| Moulins        | Canada      |
+| Anápolis       | Canada      |
+| Cork           | Canada      |
+| Raj Nandgaon   | Ireland     |
+| Cagnes-sur-Mer | Ireland     |
+| Terneuzen      | Ireland     |
+| Meridian       | Ireland     |
+| Lasnigo        | Ireland     |
+| Chestermere    | Ireland     |
+| Belfast        | Ireland     |
+| Kailua         | Isle of Man |
+| Ceyhan         | Isle of Man |
+| Horsham        | Isle of Man |
+| San Vicente    | Isle of Man |
+| Chartres       | Isle of Man |
+| Bremerhaven    | Isle of Man |
+| Denderbelle    | Isle of Man |
+| Ogbomosho      | Isle of Man |
+| Abbeville      | Japan       |
+| Berlin         | Japan       |
+| Bozeman        | Japan       |
+| Pontevedra     | Japan       |
+| Rzeszów        | Japan       |
+| Houston        | Japan       |
+| ?slahiye       | Japan       |
+| Milena         | Japan       |
++----------------+-------------+
+58 rows in set (0.00 sec)

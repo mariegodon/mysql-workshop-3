@@ -1,0 +1,31 @@
+mysql> SELECT addressLine1, city, LENGTH(CONCAT(addressLine1, city)) AS combinedLength FROM Address ORDER BY combinedLength ASC LIMIT 25;
++---------------+--------+----------------+
+| addressLine1  | city   | combinedLength |
++---------------+--------+----------------+
+| 3267 Eu Road  | Ila    |             15 |
+| 7507 Et Ave   | Muno   |             15 |
+| 403 Ut Av.    | Saumur |             16 |
+| 585 Amet Av.  | Kano   |             16 |
+| 6143 Sed Rd.  | Bida   |             16 |
+| 578 Eu Av.    | Gretna |             16 |
+| 941 Nunc St.  | Cork   |             16 |
+| 3330 A, Rd.   | Taupo  |             16 |
+| 7868 Vel St.  | Lienz  |             17 |
+| 2738 Ut St.   | Okpoko |             17 |
+| 6423 Sit St.  | Zaria  |             17 |
+| 9891 Sit St.  | Konin  |             17 |
+| 6310 Id Rd.   | Torino |             17 |
+| 8543 A, Rd.   | Vienna |             17 |
+| 5561 Et Rd.   | Vienna |             17 |
+| 9896 Cum Road | Alix   |             17 |
+| 4174 Nisi Rd. | Hope   |             17 |
+| 6524 Sit St.  | Sandy  |             17 |
+| 3631 Id Ave   | Eugene |             17 |
+| 7536 In, St.  | Hapur  |             17 |
+| 9850 Ac, St.  | Vienna |             18 |
+| 742 Orci St.  | Berlin |             18 |
+| 8361 Nec St.  | Aurora |             18 |
+| 2840 Ut, St.  | Berlin |             18 |
+| 5868 Odio Rd. | Essex  |             18 |
++---------------+--------+----------------+
+25 rows in set (0.00 sec)

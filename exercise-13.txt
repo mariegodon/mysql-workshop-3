@@ -1,0 +1,29 @@
+mysql> SELECT DATEDIFF(modifiedOn, createdOn) AS timeFromCreatedToModified FROM AddressBook;
++---------------------------+
+| timeFromCreatedToModified |
++---------------------------+
+|                        18 |
+|                      -477 |
+|                        43 |
+|                      -177 |
+|                      -447 |
+|                        53 |
+|                        28 |
+|                      -130 |
+|                       490 |
+|                        53 |
+|                       245 |
+|                      -192 |
+|                       128 |
+|                        81 |
+|                      -321 |
+|                      -591 |
+|                      -284 |
+|                       -74 |
+|                      -309 |
+|                       353 |
+|                      -230 |
+|                      -253 |
+|                        77 |
++---------------------------+
+1100 rows in set (0.00 sec)

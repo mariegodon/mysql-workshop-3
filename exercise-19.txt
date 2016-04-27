@@ -1,0 +1,16 @@
+mysql> SELECT id, DATE_FORMAT(createdOn, "%b %e %Y %r") AS createdOn, DATE_FORMAT(modifiedOn, "%D %y %a %k %i %b %j") AS modifiedOn FROM Account LIMIT 10;
++----+-------------------------+---------------------------+
+| id | createdOn               | modifiedOn                |
++----+-------------------------+---------------------------+
+|  1 | May 16 2016 12:35:09 PM | 15th 14 Sat 6 06 Nov 319  |
+|  2 | Mar 21 2016 11:42:37 PM | 31st 16 Sun 12 34 Jul 213 |
+|  3 | Aug 16 2016 04:51:27 PM | 24th 16 Sun 0 17 Jul 206  |
+|  4 | Apr 26 2015 06:43:45 AM | 19th 16 Sat 23 50 Mar 079 |
+|  5 | Sep 16 2015 08:45:17 AM | 8th 16 Fri 22 28 Jul 190  |
+|  6 | Jul 10 2016 11:53:43 PM | 22nd 15 Thu 22 13 Oct 295 |
+|  7 | May 9 2015 01:58:30 AM  | 5th 14 Wed 18 33 Nov 309  |
+|  8 | Jan 2 2016 11:43:38 AM  | 22nd 16 Fri 17 20 Apr 113 |
+|  9 | Oct 6 2015 09:29:25 AM  | 2nd 16 Wed 16 40 Mar 062  |
+| 10 | Aug 20 2015 07:19:48 PM | 21st 16 Tue 19 24 Jun 173 |
++----+-------------------------+---------------------------+
+10 rows in set (0.00 sec)

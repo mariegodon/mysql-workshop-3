@@ -1,0 +1,22 @@
+mysql> CREATE TABLE AccountCopy LIKE Account; 
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT AccountCopy SELECT * FROM Account;
+Query OK, 1000 rows affected (0.02 sec)
+Records: 1000  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE AccountCopy SET modifiedOn = NOW();
+Query OK, 1000 rows affected (0.01 sec)
+Rows matched: 1000  Changed: 1000  Warnings: 0
+
+mysql> SELECT * FROM AccountCopy LIMIT 5;
++----+---------------------------------+-------------+---------------------+---------------------+
+| id | email                           | password    | createdOn           | modifiedOn          |
++----+---------------------------------+-------------+---------------------+---------------------+
+|  1 | Donec.vitae@Phasellusornare.org | LUW56VCP9SK | 2016-05-16 12:35:09 | 2016-04-27 20:48:58 |
+|  2 | sit.amet.metus@orcilacus.net    | TYV38WIA6MT | 2016-03-21 23:42:37 | 2016-04-27 20:48:58 |
+|  3 | ipsum.Donec@tellus.ca           | WZE25PPL3KA | 2016-08-16 16:51:27 | 2016-04-27 20:48:58 |
+|  4 | Quisque@Donec.net               | QWZ62HQU1MH | 2015-04-26 06:43:45 | 2016-04-27 20:48:58 |
+|  5 | in.cursus@sedconsequat.edu      | JTV98CDW5SE | 2015-09-16 08:45:17 | 2016-04-27 20:48:58 |
++----+---------------------------------+-------------+---------------------+---------------------+
+5 rows in set (0.00 sec)

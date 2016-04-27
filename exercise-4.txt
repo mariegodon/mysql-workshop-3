@@ -1,0 +1,47 @@
+mysql> SELECT CONCAT(UPPER(SUBSTRING(e.firstName, 1, 1)), SUBSTRING(e.firstName, 2, LENGTH(e.firstName)-2), UPPER(SUBSTRING(e.firstName, LENGTH(e.firstName)))) AS first_Names_In_Pharetra FROM AddressBook ab JOIN Entry e ON e.AddressBookId = ab.id WHERE ab.name = "Pharetra Ut Limited";
++-------------------------+
+| first_Names_In_Pharetra |
++-------------------------+
+| ZeleniA                 |
+| AbduL                   |
+| IdolA                   |
+| IllanA                  |
+| WinifreD                |
+| BuckminsteR             |
+| HeidI                   |
+| NelL                    |
+| CiarA                   |
+| SylviA                  |
+| CaryN                   |
+| DieteR                  |
+| JamaliA                 |
+| HerroD                  |
+| UnitY                   |
+| PascalE                 |
+| ColtoN                  |
+| JamaL                   |
+| AbeL                    |
+| ZenA                    |
+| PrescotT                |
+| IdonA                   |
+| PalomA                  |
+| NevE                    |
+| KylA                    |
+| JamaL                   |
+| AmenA                   |
+| MelaniE                 |
+| DriscolL                |
+| GaretH                  |
+| ColT                    |
+| MarthA                  |
+| SierrA                  |
+| NitA                    |
+| CelestE                 |
+| KathleeN                |
+| SamueL                  |
+| AaroN                   |
+| CheyennE                |
+| BretT                   |
+| RebekaH                 |
++-------------------------+
+65 rows in set (0.00 sec)

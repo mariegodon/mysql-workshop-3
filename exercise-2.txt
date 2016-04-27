@@ -1,0 +1,10 @@
+SOURCE data/import-account.sql
+
+SOURCE data/import-addressbook.sql
+
+SOURCE data/import-entry.sql
+
+...
+
+Query OK, 100 rows affected, 3 warnings (0.01 sec)
+Records: 100  Duplicates: 0  Warnings: 3

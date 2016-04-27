@@ -1,0 +1,8 @@
+mysql> SELECT p.type, p.subtype, p.content AS phoneNumber, CONCAT(e.lastName, ", ", e.firstName) AS person FROM Phone p JOIN Entry e ON p.entryId = e.id WHERE e.firstName = "Charlotte" AND e.lastName = "Jenkins";
++-------+----------+----------------+--------------------+
+| type  | subtype  | phoneNumber    | person             |
++-------+----------+----------------+--------------------+
+| other | fax      | (110) 167-3420 | Jenkins, Charlotte |
+| home  | landline | (605) 175-1334 | Jenkins, Charlotte |
++-------+----------+----------------+--------------------+
+2 rows in set (0.00 sec)

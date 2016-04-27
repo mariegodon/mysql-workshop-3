@@ -1,0 +1,20 @@
+mysql> SELECT em.type, em.content AS email, e.addressBookId FROM ElectronicMail em JOIN Entry e ON em.entryId = e.id WHERE e.addressBookId = 100;
++-------+--------------------------------------------+---------------+
+| type  | email                                      | addressBookId |
++-------+--------------------------------------------+---------------+
+| other | Nam.tempor@nisimagna.co.uk                 |           100 |
+| home  | vitae.diam@sapienAeneanmassa.com           |           100 |
+| other | cursus.vestibulum@pellentesqueSeddictum.ca |           100 |
+| other | velit@vestibulum.co.uk                     |           100 |
+| work  | tincidunt.congue.turpis@Inmi.net           |           100 |
+| home  | nibh.Donec.est@nibh.org                    |           100 |
+| work  | malesuada.fames.ac@Sedeu.co.uk             |           100 |
+| home  | tortor.dictum@Nulla.org                    |           100 |
+| home  | mauris.blandit.mattis@Integersemelit.net   |           100 |
+| other | Nunc.ac@parturientmontesnascetur.com       |           100 |
+| other | vulputate.posuere.vulputate@liberoDonec.ca |           100 |
+| work  | massa.Quisque.porttitor@enimSednulla.edu   |           100 |
+| work  | eget@viverraMaecenasiaculis.net            |           100 |
+| work  | eu.tellus@ipsum.co.uk                      |           100 |
++-------+--------------------------------------------+---------------+
+14 rows in set (0.00 sec)
